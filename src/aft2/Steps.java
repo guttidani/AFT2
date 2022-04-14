@@ -17,24 +17,28 @@ public class Steps {
   private static int LastPlayer=-1;
   public static String StepCheck(int x, int y, int jatekos){
       //ellenorzi es betolti az x et vagy o at
+
+      //if(jatekos!=1 || jatekos!=2){
+      //    return "1 vagy 2 jatekos lehet";
+      //}
       
-      if(jatekos!=1 || jatekos!=2){
-          return "1 vagy 2 jatekos lehet";
-      }
-      if(table[x][y]==""){
+      if(table[x][y] == null){
           if(jatekos==1){
               LastPlayer =jatekos;
               table[x][y]="x";
+              System.out.println("x");
               return "x";
           }
           else {
               LastPlayer =jatekos;
               table[x][y]="o";
+              System.out.println("o");
               return "o";
           }
           
       }
       else{
+          System.out.println("!!!");
           return "Folgalt a hely";
       }
       
